@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <title>Naive Bayes Results</title>
+</head>
+<body>
+    <div class="container my-3">
+        <h1>Sentiments Computed</h1>
+        <div class="container">
+            <p style="color: green;">Positive Sentiments : {{positive}}%</p>
+            <p style="color: black;">Neutral Sentiments : {{neutral}}%</p>
+            <p style="color: red;">Negative Sentiments : {{negative}}%</p>
+            <div>
+                <img src="{{ url_for('static', filename=plot_file) }}" alt="Sentiment Analysis Plot">
+            </div>
+        </div>
+        <div>
+            <form method="POST" action="/perform_naive_accuracy">
+                <button class="btn btn-primary my-2">Check Accuracy</button>
+            </form>
+            <a href="javascript:history.back()"><button class="btn btn-primary">Return</button></a>
+        </div>
+    </div>
+
+
+    <!-- <div class="container">
+        <form method="POST" action="/compute_naive_bayes_accuracy">
+            <button class="btn btn-primary">See Accuracy</button>
+          </form>
+    </div> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Twitter Data Scraper</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h2 class="mb-4 text-center">Sentiment Analysis of Twitter Data</h2>
+      <form method="POST" action="/scrape_twitter_data">
+        <div class="form-group">
+          <label for="words">Words:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="words"
+            name="words"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="hashtags">Hashtags:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="hashtags"
+            name="hashtags"
+          />
+        </div>
+        <div class="form-group">
+          <label for="since">Since:</label>
+          <input
+            type="date"
+            class="form-control"
+            id="since"
+            name="since"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="till">Till:</label>
+          <input
+            type="date"
+            class="form-control"
+            id="till"
+            name="till"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="limits">Number of Tweets:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="limits"
+            name="limits"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <form method="POST" action="/perform_sentiment">
+        <button type="submit" class = "btn btn-primary my-3">Compute Sentiment using VADER</button>
+      </form>
+      <form method="POST" action="/perform_naive_bayes">
+        <button class="btn btn-primary">Compute Sentiment using Naive Bayes Classifier</button>
+      </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <title>Sentiment Analysis Result</title>
+</head>
+<body>
+  <div class="container my-3">
+    <h1>Sentiment Analysis Result</h1>
+    <div class="container">
+      <p>The sentiment of the tweets is : {{ result }}</p>
+      <p>The polarity is : {{polar}}</p>
+    </div>
+    <div>
+      <a href="javascript:history.back()"><button class="btn btn-primary">Return</button></a>
+    </div>
+  </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
